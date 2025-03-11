@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
-  "scripts": {
-    "ng": "ng",
-    "start": "nodemon server.js & npm run electron",
-    "build": "ionic build --prod",
-    "electron": "npm run build && electron .",
-    "package-win": "electron-packager . hello-obinna --platform=darwin --arch=x64 --out=dist/ --overwrite"
-  },
+  
+"scripts": {
+  "ng": "ng",
+  "start": "electron .",
+  "build": "electron-packager . MyElectronApp --platform=darwin --arch=x64 --out=dist/ --overwrite",
+  "electron": "npm run build && electron .",
+  "package-mac": "electron-packager . MyElectronApp --platform=darwin --arch=x64 --out=dist/ --overwrite"
+}
+,
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.0",

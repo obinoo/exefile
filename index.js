@@ -1,6 +1,9 @@
 const { app, BrowserWindow, Tray, Menu } = require("electron");
 const path = require("path");
 
+// Import the WebSocket server
+require("./server");
+
 let win;
 let tray;
 
@@ -44,4 +47,3 @@ app.whenReady().then(() => {
         if (process.platform !== "darwin") app.quit();
     });
 });
-
